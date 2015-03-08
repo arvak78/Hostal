@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Hostal.iml" filepath="$PROJECT_DIR$/Hostal.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hostal-ejb/hostal-ejb.iml" filepath="$PROJECT_DIR$/hostal-ejb/hostal-ejb.iml" />
     </modules>
   </component>
 </project>

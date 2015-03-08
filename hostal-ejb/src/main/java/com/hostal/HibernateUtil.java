@@ -1,14 +1,13 @@
 package com.hostal;
 
 import java.util.Properties;
- 
+
+import com.hostal.model.UsersEntity;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.service.ServiceRegistry;
- 
-import com.journaldev.hibernate.model.Employee1;
- 
+
 public class HibernateUtil {
  
     //XML based configuration
@@ -69,9 +68,9 @@ public class HibernateUtil {
         //Create Properties, can be read from property files too
         Properties props = new Properties();
         props.put("hibernate.connection.driver_class", "com.mysql.jdbc.Driver");
-        props.put("hibernate.connection.url", "jdbc:mysql://localhost/TestDB");
-        props.put("hibernate.connection.username", "pankaj");
-        props.put("hibernate.connection.password", "pankaj123");
+        props.put("hibernate.connection.url", "jdbc:mysql://localhost:3306/Hostal");
+        props.put("hibernate.connection.username", "arvak");
+        props.put("hibernate.connection.password", "kubala");
         props.put("hibernate.current_session_context_class", "thread");
          
         configuration.setProperties(props);
@@ -79,7 +78,7 @@ public class HibernateUtil {
         //we can set mapping file or class with annotation
         //addClass(Employee1.class) will look for resource
         // com/journaldev/hibernate/model/Employee1.hbm.xml (not good)
-        configuration.addAnnotatedClass(Employee1.class);
+        configuration.addAnnotatedClass(UsersEntity.class);
          
         ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder().applySettings(configuration.getProperties()).build();
         System.out.println("Hibernate Java Config serviceRegistry created");

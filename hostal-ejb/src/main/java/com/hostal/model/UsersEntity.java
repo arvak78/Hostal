@@ -1,4 +1,5 @@
-package db;
+package com.hostal.model;
+
 
 import javax.persistence.*;
 
